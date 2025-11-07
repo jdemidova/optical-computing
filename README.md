@@ -8,11 +8,9 @@ The work demonstrates how continuous mathematical operators can be approximated 
 ---
 
 ## 🧠 Theoretical Background
-An **integral transform** maps a function \( f(x) \) into another function \( F(E) \) using a kernel \( K(E, x) \):
+An **integral transform** maps a function f(x) into another function F(E) using a kernel K(E, x):
 
-\[
-F(E) = \int_a^b K(E, x)\, f(x)\, dx
-\]
+F(E) = ∫ from a to b [ K(E, x) · f(x) · dx ]
 
 In this work, the integral is evaluated **numerically** using the **left rectangle (Riemann sum) method**.
 This approach can be extended to complex-valued signals and kernels, allowing matrix-like formulations for computational efficiency.
@@ -22,26 +20,21 @@ This approach can be extended to complex-valued signals and kernels, allowing ma
 ## ⚙️ Task Description
 
 ### 🔹 Kernel and Parameters
-\[
-K(E, x) = x^{\alpha E - 1}
-\]
+K(E, x) = x^(αE - 1)
 
 Integration and output domains:
-
-\[
-[a, b] = [1, 5], \quad [p, q] = [0, 3]
-\]
+[a, b] = [1, 5],  [p, q] = [0, 3]
 
 ---
 
-### 🔹 Implementation Requirements
+### 🔹 Requirements
 
 1. **Input Signal:**  
-   \( f(x) = e^{i \beta x} \) or any simple complex-valued function.
+   f(x) = e^(i·β·x) or any simple complex-valued function.
 
 3. **Discretization Parameters:**  
-   - Step: \( \Delta x = \Delta t = 1 \)  
-   - Intervals: \( n = 1000, \; m = 1000 \)
+   - Step: Δx = Δt = 1
+   - Intervals: n = 1000, ; m = 1000 
 
 4. **Numerical Calculation:**  
    Compute the transform using discrete forms.
@@ -53,7 +46,7 @@ Integration and output domains:
 6. **Parameter Study:**  
    - Vary number of discretization points  
    - Vary integration bounds  
-   - Vary function parameter /alpha  
+   - Vary function parameter α  
 
    Analyze how these affect numerical accuracy and the shape of both signals.  
    ⚠️ If your integration domain is non-negative, do not extend it into negative values.
@@ -62,10 +55,10 @@ Integration and output domains:
 ---
 
 ## 🧩 Hints
-- Test convergence by changing \( m \), \( n \), and bounds \([a,b]\), \([p,q]\).
+- Test convergence by changing m, n, and bounds [a,b], [p,q].
 
 ---
 
-## 📊 Expected Results
+## 📊 Results
 - Discretized visualizations of the **original** and **transformed** signals (amplitude + phase).  
 - Analysis of numerical errors and how the discretization affects results.
