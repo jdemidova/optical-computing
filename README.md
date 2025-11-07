@@ -1,4 +1,4 @@
-# 🧮 PART 1: Numerical Implementation of Finite-Range Integral Transforms  
+# PART 1: Numerical Implementation of Finite-Range Integral Transforms  
 ---
 
 ## 🎯 Overview
@@ -27,7 +27,7 @@ Integration and output domains:
 
 ---
 
-### 🔹 Requirements
+### 🔹 Task Description
 
 1. **Input Signal:**  
    f(x) = e^(i·β·x) or any simple complex-valued function.
@@ -62,3 +62,48 @@ Integration and output domains:
 ## 📊 Results
 - Discretized visualizations of the **original** and **transformed** signals (amplitude + phase).  
 - Analysis of numerical errors and how the discretization affects results.
+---
+# PART 2: Numerical and Analytical Implementation of the Optical Fourier Transform
+---
+
+## 🎯 Overview
+This part focuses on **implementing and analyzing the optical Fourier transform** using two different approaches:
+
+1. **Numerical Fast Fourier Transform (FFT)**  
+2. **Direct numerical integration (finite Fourier transform)**  
+
+The goal is to compare the two methods, verify their equivalence, and explore analytical properties of the transform for specific optical fields.
+
+---
+
+## ⚙️ Task Description
+
+### 🔹 Input Field 
+The input optical field is defined as:
+f(x) = (4x² − 2) * exp(−x² / 2)
+OR Gaussian beam:
+f(x) = -s * x^2
+
+---
+
+### 🔹 Task Description
+
+1. **Implement the one-dimensional finite Fourier transform** using the **FFT algorithm**.  
+
+2. **Plot the input Gaussian beam** as amplitude and phase
+
+3. Test the implemented method of step 1 by **inputting a Gaussian beam**. The **output** must also be the **Gaussian beam** of a different scale.
+
+4. **Implement the finite Fourier transform using a standard numerical integration method (e.g., the rectangle method)**. It is necessary to calculate the integral for each discrete value of u to obtain the result as a vector. A Gaussian beam should be input and output again.
+5. **Make another input field the input for the transform**. Plot the field itself and the transform result.
+6. **Analytically calculate (theorise) the transform result** of the input field and plot the analytical (theorised) and actual results (from step 5) on the same grid. They should match.
+
+---
+
+## 📊 Results
+- Amplitude and phase plots of the **Gaussian beam** and **field input** before and after transformation.  
+- Comparison between:
+  - FFT-based result  
+  - Direct integration result  
+  - Analytical result using Hermite–Gaussian representation  
+Matching all three confirms the correctness of the implementation.
